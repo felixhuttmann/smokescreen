@@ -1,8 +1,33 @@
-# Container Image Usage
+# Container Images and Binary Releases
 
-This project provides pre-built container images for smokescreen that are automatically built and published to GitHub Container Registry.
+This project provides both pre-built container images and native binaries for smokescreen that are automatically built and published.
 
-## Available Images
+## Binary Releases
+
+Pre-compiled binaries are available for download from the [GitHub Releases](https://github.com/stripe/smokescreen/releases) page:
+
+- **Linux**: `smokescreen-linux-amd64`, `smokescreen-linux-arm64`
+- **macOS**: `smokescreen-darwin-amd64`, `smokescreen-darwin-arm64`
+
+Each release includes:
+- Binaries for amd64 and arm64 for mac and linux
+
+### Download and Install
+
+```bash
+# Download the latest binary (replace with your platform)
+curl -L -o smokescreen https://github.com/stripe/smokescreen/releases/latest/download/smokescreen-linux-amd64
+
+# Make it executable
+chmod +x smokescreen
+
+# Run
+./smokescreen --help
+  ```
+
+## Container Images
+
+### Available Images
 
 The container images are available at:
 - `ghcr.io/stripe/smokescreen:latest` - Latest release
